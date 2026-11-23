@@ -193,21 +193,11 @@ export const markovPaper = {
 
 export const about = {
   title: 'About',
-  intro: 'Jayashruthi Rajesh Babu (Shruthi) is a data science student at the University of Leeds, graduating in 2027, with project experience in brain computer interfaces, EEG decoding and agentic AI',
+  intro: 'I’m Jayashruthi Rajesh Babu (Shruthi), a data science student at the University of Leeds, graduating in 2027, and this site brings together the software I build and the questions I write about',
   paragraphs: [
-    'Research interests include neuroscience, neurotechnology and artificial intelligence, particularly learning, decision making and the limits of understanding in artificial systems',
-    'During a 2026 internship in the Solutions AI Lab (SAIL) at management consultancy Baringa, I supported an SSEN climate resilience project during exploratory data analysis, independently investigated a risk pathway and proposed directions for future modelling',
-    'My wider contribution included analysis of client data in a confidential Jupyter notebook on AWS SageMaker and a confidential internal methodology document for the team to support future climate resilience projects using data science and machine learning',
-    'IntentLab uses machine learning to classify imagined hand movements from recorded EEG and is included in NeuroTechX’s community curated Awesome BCI resources',
-    'Other work includes GeneCraft, which explores agent memory and persistent work in Minecraft, and essays on consciousness, cognition and computational neuroscience',
-    'Professional interests are in AI and ML engineering, with an emphasis on practical systems and careful evaluation, and enquiries about opportunities and collaborations are welcome',
-  ],
-  currentHeading: 'Current interests',
-  current: [
-    'Brain computer interfaces and motor imagery through IntentLab',
-    'Agentic AI, persistent memory and shared worlds through GeneCraft',
-    'Deep learning and explainable AI',
-    'The relationship between pattern recognition and understanding',
+    'I built IntentLab to explore imagined movement decoding from recorded EEG, with a public demonstration for inspecting the predictions and their limits, and GeneCraft to experiment with agents that remember conversations and carry out work in Minecraft',
+    'IntentLab is included in NeuroTechX’s Awesome BCI resources, and during an internship in Baringa’s Solutions AI Lab I worked on exploratory data analysis for an SSEN climate resilience project',
+    'I’m open to AI and ML opportunities and collaborations involving neurotechnology or software agents, so please email me with a short description of the problem or project if you would like to work together',
   ],
 };
 
