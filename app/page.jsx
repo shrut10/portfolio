@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ThrongletField from '@/components/ThrongletField';
 import PixelIcon from '@/components/PixelIcon';
 import FeaturedProject from '@/components/FeaturedProject';
-import WritingList from '@/components/WritingList';
+import WritingList, { EssayDate } from '@/components/WritingList';
 import { home, posts, intentlab, genecraft, ui } from '@/content/site';
 import StructuredData from '@/components/StructuredData';
 import { pageMetadata, pageData } from '@/lib/seo';
@@ -26,7 +26,7 @@ export default function Home() {
               <li key={post.link}>
                 <a href={post.link} target="_blank" rel="noopener noreferrer">
                   {post.image && <Image src={post.image.src} width={post.image.width} height={post.image.height} alt="" unoptimized />}
-                  <span>{post.title}<span className="sr-only"> (Medium, opens in a new tab)</span></span>
+                  <span className="essay-update-copy"><span className="essay-update-title">{post.title}<span className="sr-only"> (Medium, opens in a new tab)</span></span><EssayDate published={post.published} /></span>
                   <span aria-hidden="true">↗</span>
                 </a>
               </li>
