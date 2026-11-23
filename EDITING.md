@@ -21,7 +21,7 @@ The quickest places to start are `home.newsTitle` and `home.newsText` (the homep
 | IntentLab’s explanation, motivation and results | `intentlab` |
 | The NeuroTechX listing on the homepage and project page | `home.newsResourceLabel`, `intentlab.recognition`, `intentlab.recognitionDetail` and their adjacent links |
 | Other project names, descriptions, thumbnails and GitHub links | `projects` |
-| Essay titles, summaries, publication dates, links and banner credits | `posts`, ordered by professional relevance. The first two appear under Selected writing on the homepage, and the first leads the Writing page. The remaining essays keep this order, regardless of date or whether they have an image. |
+| Essay titles, summaries, publication dates, links and banner credits | `posts`, ordered by professional relevance. Entries marked `homeUpdate: true` appear above the first two other essays under Selected writing on the homepage, with their short descriptions. The first essay leads the Writing page. The remaining essays keep this order, regardless of date or whether they have an image. Set an image’s `fit` to `contain` to show a complete diagram without cropping. |
 | The mathematics paper on the Writing page | `markovPaper` |
 | About page | `about` |
 | Contact page | `contact` |

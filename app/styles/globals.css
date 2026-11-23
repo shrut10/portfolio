@@ -495,6 +495,7 @@ h3 { font-size: 1.13rem; }
 .essay-updates-heading h2 { color: var(--lilac); font-size: 1rem; }
 .essay-update-copy { min-width: 0; flex: 1; }
 .essay-update-title { display: block; }
+.essay-update-excerpt { display: block; margin-top: 6px; color: var(--muted); font-size: .9rem; font-weight: 400; line-height: 1.5; }
 .essay-update-copy time { display: block; margin-top: 5px; font-size: .75rem; font-weight: 400; color: var(--muted); }
 .essay-updates ul {
   list-style: none;
@@ -519,6 +520,7 @@ h3 { font-size: 1.13rem; }
 .essay-updates a:focus-visible { color: var(--lilac); background: #15111b; }
 .essay-updates a:focus-visible { outline-color: var(--lilac); outline-offset: -3px; }
 .essay-updates img { width: 76px; height: 48px; flex: none; object-fit: cover; border: 1px solid var(--line); }
+.essay-updates img.essay-update-diagram { object-fit: contain; background: #fff; }
 .essay-updates a > span:last-child { margin-inline-start: auto; color: var(--lilac); }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {

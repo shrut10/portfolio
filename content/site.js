@@ -128,7 +128,7 @@ export const projects = [
   { id: 'pagerank', kind: 'Earlier project', icon: 'network', title: 'PageRank visualiser', description: 'A web crawler and SQLite link graph, with an iterative PageRank implementation and a D3 view of how pages connect', tags: ['Python', 'SQLite', 'PageRank', 'D3'], link: 'https://github.com/shrut10/pagerank' },
 ];
 
-// Ordered by professional relevance; the first two are highlighted on the homepage.
+// Ordered by professional relevance; homeUpdate entries appear above the first two on the homepage.
 export const posts = [
   {
     title: 'On Rogue Agents',
@@ -146,6 +146,24 @@ export const posts = [
       creditUrl: 'https://www.metmuseum.org/art/collection/search/362798',
       licence: { label: 'CC0', url: 'https://creativecommons.org/publicdomain/zero/1.0/' },
       creditNote: 'Detail.',
+    },
+  },
+  {
+    title: 'Controlling generative environments with the mind: the role of world models',
+    excerpt: 'Exploring how brain computer interfaces could guide generative worlds, and what it would take to preserve human agency',
+    topic: 'World models & brain computer interfaces',
+    published: '2026-11-23',
+    homeUpdate: true,
+    link: 'https://medium.com/@rjayashruthi/controlling-generative-environments-using-the-mind-58c88b088de1',
+    image: {
+      src: '/writing/world-model-architecture.png',
+      width: 1024,
+      height: 751,
+      fit: 'contain',
+      alt: 'World model architecture linking a vision encoder, recurrent memory and controller to observations and actions in an environment',
+      credit: 'David Ha and Jürgen Schmidhuber, World Models, 2018',
+      creditUrl: 'https://worldmodels.github.io/',
+      licence: { label: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
     },
   },
   {

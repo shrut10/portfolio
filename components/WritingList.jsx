@@ -25,6 +25,7 @@ export function WritingCard({ post, featured = false }) {
             width={image.width}
             height={image.height}
             alt={image.alt}
+            style={image.fit ? { objectFit: image.fit, backgroundColor: '#fff' } : undefined}
             unoptimized
             loading={featured ? 'eager' : 'lazy'}
           />

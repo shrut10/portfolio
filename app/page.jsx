@@ -11,7 +11,11 @@ import { pageMetadata, pageData } from '@/lib/seo';
 export const metadata = pageMetadata('home');
 
 export default function Home() {
-  const selectedEssays = posts.slice(0, 2);
+  const selectedEssays = [
+    ...posts.filter(post => post.homeUpdate),
+    ...posts.filter(post => !post.homeUpdate).slice(0, 2),
+  ];
+  const otherEssays = posts.filter(post => !selectedEssays.includes(post));
 
   return <><StructuredData data={pageData('home')} />
     <div className="home-top">
@@ -25,8 +29,8 @@ export default function Home() {
             {selectedEssays.map(post => (
               <li key={post.link}>
                 <a href={post.link} target="_blank" rel="noopener noreferrer">
-                  {post.image && <Image src={post.image.src} width={post.image.width} height={post.image.height} alt="" unoptimized />}
-                  <span className="essay-update-copy"><span className="essay-update-title">{post.title}<span className="sr-only"> (Medium, opens in a new tab)</span></span><EssayDate published={post.published} /></span>
+                  {post.image && <Image src={post.image.src} width={post.image.width} height={post.image.height} alt="" className={post.image.fit === 'contain' ? 'essay-update-diagram' : undefined} unoptimized />}
+                  <span className="essay-update-copy"><span className="essay-update-title">{post.title}<span className="sr-only"> (Medium, opens in a new tab)</span></span>{post.homeUpdate && <span className="essay-update-excerpt">{post.excerpt}</span>}<EssayDate published={post.published} /></span>
                   <span aria-hidden="true">↗</span>
                 </a>
               </li>
@@ -42,7 +46,7 @@ export default function Home() {
     </div>
 
     <section className="page-section" aria-labelledby="projects-heading"><div className="section-heading"><div><h2 id="projects-heading">{home.projectsHeading}</h2><p>{home.projectsIntro}</p></div><Link href="/projects" className="text-link">{ui.allProjects} <span aria-hidden="true">→</span></Link></div><div className="featured-grid"><FeaturedProject compact project={intentlab} href="/projects/intentlab" titleId="home-intentlab" /><FeaturedProject compact project={genecraft} href="/projects/genecraft" titleId="home-genecraft" /></div></section>
-    <section className="page-section" aria-labelledby="writing-heading"><div className="section-heading"><div><h2 id="writing-heading">{home.writingHeading}</h2><p>{home.writingIntro}</p></div><Link href="/blog" className="text-link">{ui.allWriting} <span aria-hidden="true">→</span></Link></div><WritingList posts={posts.slice(2, 5)} compact /></section>
+    <section className="page-section" aria-labelledby="writing-heading"><div className="section-heading"><div><h2 id="writing-heading">{home.writingHeading}</h2><p>{home.writingIntro}</p></div><Link href="/blog" className="text-link">{ui.allWriting} <span aria-hidden="true">→</span></Link></div><WritingList posts={otherEssays.slice(0, 3)} compact /></section>
     <section className="contact-strip"><PixelIcon name="mail" /><div><h2>{home.contactHeading}</h2><p>{home.contactText}</p></div><Link href="/contact" className="button">{ui.contactButton} <span aria-hidden="true">↗</span></Link></section>
   </>;
 }
